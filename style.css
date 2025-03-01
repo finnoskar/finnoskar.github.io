@@ -1,6 +1,6 @@
 html {}
 body {}
-main, p, .marginal  {
+main, p {
   margin: 0 20%;
   color: green;
 }
