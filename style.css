@@ -1,6 +1,6 @@
 html {}
 body {}
-main {
+main, p {
   margin: 0 20%;
 }
 header {}
