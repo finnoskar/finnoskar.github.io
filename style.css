@@ -1,7 +1,8 @@
 html {}
 body {}
-main, p {
+main, p, .marginal  {
   margin: 0 20%;
+  color: green;
 }
 header {}
 footer {}
