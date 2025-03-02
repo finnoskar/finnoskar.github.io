@@ -37,7 +37,7 @@ body {
 header {
   height: 100vh;
   margin: 0;
-  background: url('./assets/indexbanner.png');
+  background: url(./assets/indexbanner.png);
   background-size: cover;
 }
 nav {
