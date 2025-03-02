@@ -1,0 +1,71 @@
+html {
+  color: rgb(20, 23, 28);
+  background-color: rgb(221, 232, 255);
+  margin: 0;
+  font-family: 'Calibri';
+}
+body {
+  margin: 0;
+}
+.centred-content {
+  margin: 20px 13%;
+  padding: 30px 2%;
+  border-radius: 30px;
+  background-color: rgb(230, 236, 245);
+}
+.split-side-content {
+  margin: 20px 3.5%;
+  padding: 30px 2%;
+  background-color: rgb(230, 236, 245);
+  overflow: scroll;
+  max-height: 60vh;
+  border-radius: 30px;
+}
+.split-side-content .left-content {
+  position: sticky;
+  top: 20px;
+  float: left;
+  width: 46.5%;
+}
+.split-side-content .right-content {
+  width: 46.5%;
+  overflow: auto;
+}
+.right-content img, .left-content img {
+  width: 100%;
+}
+header {
+  height: 100vh;
+  margin: 0;
+  background: url('assets/indexbanner.png');
+  background-size: cover;
+}
+nav {
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  background-color: rgb(30, 53, 118);
+}
+nav > h3, nav > ul {
+  margin: 0 6%;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+nav li {
+  padding: 10px;
+  margin: 5px 0;
+  text-align: center;
+}
+nav a {
+  text-decoration: none;
+  color: rgb(234, 238, 255);
+  opacity: 1;
+}
+nav a :hover {
+  opacity: 0.75;
+}
+footer {
+  margin: 0;
+}
