@@ -46,17 +46,19 @@ body {
 header {
   height: 100vh;
   margin: 0;
-  background: url('assets/index_banner.png');
+  background: url('!assets/index_banner.png');
   background-position: center;
   background-size: cover;
 }
 header > h1 {
   position: relative;
+  font-size: 5em;
   top: 30vh;
   left: 100px;
 }
 header > h4 {
  position: relative;
+ font-size: 3em;
  top: 40vh;
  left: 50vh;
  color: rgb(24, 25, 35);
