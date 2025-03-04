@@ -59,17 +59,17 @@ header > h1 {
 header > h4 {
  position: relative;
  font-size: 3em;
- top: 40vh;
- left: 50vh;
+ top: 30vh;
+ left: 70vh;
  color: rgb(24, 25, 35);
 }
 header > h4 + h4 {
-  top: 45vh;
-  left: 60vh;
+  top: 35vh;
+  left: 75vh;
 }
 header > h4 + h4 + h4 {
-  top: 50vh;
-  left: 70vh;
+  top: 40vh;
+  left: 80vh;
 }
 nav {
   font-size: 1.5em;
