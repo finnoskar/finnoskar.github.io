@@ -36,7 +36,7 @@ body {
   overflow: auto;
 }
 .right-content img, .left-content img {
-  width: 98%;
+  width: 90%;
   border-radius: 10px;
 }
 .right-content img + p, .left-content img + p {
