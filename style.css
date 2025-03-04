@@ -25,15 +25,19 @@ body {
   height: 400px;
 }
 .split-side-content .left-content {
-  position: sticky;
-  top: 0;
   float: left;
   width: 46.5%;
   padding: 0 20px;
 }
+.split-side-content.vertical-sliding .left-content {
+  position: sticky;
+  top: 0;
+}
 .split-side-content .right-content {
   padding: 0 20px;
   width: 46.5%;
+}
+.split-side-content.vertical-sliding .right-content {
   overflow: auto;
 }
 .right-content img, .left-content img {
