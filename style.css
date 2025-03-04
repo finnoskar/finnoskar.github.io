@@ -18,7 +18,7 @@ body {
   padding: 30px 2%;
   background-color: rgb(230, 236, 245);
   border-radius: 30px;
-  height: 600px;
+  height: 570px;
 }
 .split-side-content.vertical-sliding {
   overflow: auto;
