@@ -51,22 +51,22 @@ header {
   background-size: cover;
 }
 header > h1 {
-  position: static;
-  top: 75px;
+  position: relative;
+  top: 30vh;
   left: 100px;
 }
 header > h4 {
- position: static;
- top: 150px;
+ position: relative;
+ top: 40vh;
  left: 50vh;
  color: rgb(24, 25, 35);
 }
 header > h4 + h4 {
-  top: 175px;
+  top: 45vh;
   left: 60vh;
 }
 header > h4 + h4 + h4 {
-  top: 200px;
+  top: 50vh;
   left: 70vh;
 }
 nav {
