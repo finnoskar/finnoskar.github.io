@@ -18,10 +18,11 @@ body {
   padding: 30px 2%;
   background-color: rgb(230, 236, 245);
   border-radius: 30px;
-  height: 400px;
+  height: 600px;
 }
 .split-side-content.vertical-sliding {
   overflow: auto;
+  height: 400px;
 }
 .split-side-content .left-content {
   position: sticky;
