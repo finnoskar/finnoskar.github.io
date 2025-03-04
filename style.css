@@ -53,8 +53,8 @@ header {
 header > h1 {
   position: relative;
   font-size: 5em;
-  top: 30vh;
-  left: 100px;
+  top: 20vh;
+  left: 20vh;
 }
 header > h4 {
  position: relative;
