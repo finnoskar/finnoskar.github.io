@@ -17,9 +17,11 @@ body {
   margin: 20px 3.5%;
   padding: 30px 2%;
   background-color: rgb(230, 236, 245);
-  overflow: auto;
   border-radius: 30px;
   height: 400px;
+}
+.split-side-content.vertical-sliding {
+  overflow: auto;
 }
 .split-side-content .left-content {
   position: sticky;
