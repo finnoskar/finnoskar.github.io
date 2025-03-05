@@ -25,14 +25,14 @@ body {
   overflow: auto;
   height: 400px;
 }
-.split-side-content .left-content {
+.left-content {
   position: sticky;
   top: 0;
   float: left;
   width: 46.5%;
   padding: 0 20px;
 }
-.split-side-content .right-content {
+.right-content {
   padding: 0 20px;
   width: 46.5%;
   overflow: auto;
@@ -54,6 +54,7 @@ header {
   background-position: center;
   background-size: cover;
 }
+header 
 header > h1 {
   position: relative;
   font-size: 5em;
