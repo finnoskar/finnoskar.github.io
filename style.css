@@ -12,6 +12,7 @@ body {
   padding: 30px 2%;
   border-radius: 30px;
   background-color: rgb(230, 236, 245);
+  max-width: 60%;
 }
 .split-side-content {
   margin: 40px 3.5%;
