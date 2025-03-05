@@ -118,6 +118,10 @@ nav a {
 nav a:hover {
   opacity: 0.4;
 }
+a.blog-link {
+  text-decoration: none;
+  color: rgb(20, 23, 28)
+}
 footer {
   margin: 0;
   padding: 10px;
