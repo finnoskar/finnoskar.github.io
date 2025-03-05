@@ -54,7 +54,10 @@ header {
   background-position: center;
   background-size: cover;
 }
-header 
+header#index {
+  /* background-image: url('assets/index_banner.png'); */
+  background-color: #dde8ff;
+}
 header > h1 {
   position: relative;
   font-size: 5em;
@@ -70,11 +73,11 @@ header > h4 {
 }
 header > h4 + h4 {
   top: 22vh;
-  left: 75vh;
+  left: 78vh;
 }
 header > h4 + h4 + h4 {
   top: 24vh;
-  left: 80vh;
+  left: 86vh;
 }
 nav {
   font-size: 1.5em;
