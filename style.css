@@ -62,22 +62,22 @@ header > h1 {
   position: relative;
   font-size: 5em;
   top: 20vh;
-  left: 50%;
+  left: 20%;
 }
 header > h4 {
  position: relative;
  font-size: 3em;
  top: 20vh;
- left: 60%;
+ left: 45%;
  color: rgb(24, 25, 35);
 }
 header > h4 + h4 {
   top: 22vh;
-  left: 70%;
+  left: 55%;
 }
 header > h4 + h4 + h4 {
   top: 24vh;
-  left: 100vh;
+  left: 65%;
 }
 nav {
   font-size: 1.5em;
