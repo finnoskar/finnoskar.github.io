@@ -92,7 +92,7 @@ nav {
 }
 nav > h2, nav > ul {
   margin: 0 2%;
-  padding: 15px 0;
+  padding: 15px;
 }
 nav > h2 {
   border-radius: 25px;
