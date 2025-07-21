@@ -1,0 +1,12 @@
+html {
+    background: linear-gradient(#000000, #FFFFFF);
+    height: 10000rem;
+}
+h1 {
+    color: grey;
+    position: fixed;
+    font-size: 3rem;
+    text-align: center;
+    margin-left: 39vw;
+    margin-top: 0.5rem;
+}
