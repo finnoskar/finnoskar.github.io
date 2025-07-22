@@ -10,6 +10,9 @@ html {
     background-color: var(--theme-background);
     color: var(--theme-text-colour)
 }
+body {
+    margin: 0;
+}
 h1 {
     font-size: 3rem;
 }
@@ -23,14 +26,14 @@ h1 {
 }
 #heading h1 {
     position: relative;
-    top: 0;
-    margin-left: 20vw;
-    padding-top: 6rem;
+    top: 1em;
+    margin-left: 15vw;
+    padding-top: 0;
     background: linear-gradient(var(--theme-background), var(--theme-accent));
-    background-clip:text;
+    background-clip: text;
     background-attachment: fixed;
-    -webkit-background-clip:text;
-    color:transparent;
+    -webkit-background-clip: text;
+    color: transparent;
     margin-top: 3rem;
     align-self: center;
 }
