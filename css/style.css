@@ -22,9 +22,13 @@ h1 {
     z-index: -1;
 }
 #heading h1 {
+    position: relative;
+    top: 0;
+    margin-left: 20vw;
+    padding-top: 3rem;
     background: linear-gradient(var(--theme-background), var(--theme-accent));
-    background-attachment: fixed;
     background-clip:text;
+    background-attachment: fixed;
     -webkit-background-clip:text;
     color:transparent;
     margin-top: 4rem;
@@ -45,6 +49,10 @@ section {
 }
 #heading {
     margin: 0;
-    height: 100vh;
+    height: 120vh;
+    width: 100vw;
     background: linear-gradient(var(--theme-dark), var(--theme-background))
+}
+accenttext {
+    color: var(--theme-accent);
 }
