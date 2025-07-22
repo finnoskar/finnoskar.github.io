@@ -1,36 +1,32 @@
-@keyframes test-animation {
-    from {background-color: red; color: yellow;}
-    to {background-color: yellow; color: red;}
-}
-@keyframes text-motion {
-    from {margin-left: 0vw;}
-    to {margin-left: 75vw;}
-}
+
 html {
-    animation: test-animation;
-    animation-duration: 7s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    font-size: 150%;
+    --theme-background: #F1F4FF;
+    --theme-text-colour: #110700;
+    --theme-accent: #4AC8EB;
+    --theme-dark: black;
+    --theme-subdomain-colour: grey;
+    --theme-text-bg: #FFFAF7;
+    background-color: var(--theme-background);
+    color: var(--theme-text-colour)
 }
 h1 {
-    position: fixed;
-    top: 0;
     font-size: 3rem;
-    animation: text-motion;
-    animation-duration: 7s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+}
+nav + h1 {
+    margin-top: 5rem;
+    align-self: center;
 }
 h2 {
-    position: fixed;
-    bottom: 0;
     font-size: 3rem;
-    animation: text-motion;
-    animation-duration: 7s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
 }
 iframe {
     position: fixed;
     bottom: 0;
+}
+section {
+    background-color: var(--theme-text-bg);
+    border-radius: 30px;
+    margin: 1rem 15vw;
+    padding: 1rem 3rem;
 }
