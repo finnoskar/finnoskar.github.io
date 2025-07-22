@@ -25,17 +25,15 @@ h1 {
     z-index: -1;
 }
 #heading h1 {
-    position: relative;
-    top: 1em;
+    position: fixed;
+    top: 7rem;
     margin-left: 15vw;
     padding-top: 0;
     background: linear-gradient(var(--theme-background), var(--theme-accent));
     background-clip: text;
-    background-attachment: fixed;
     -webkit-background-clip: text;
     color: transparent;
-    margin-top: 3rem;
-    align-self: center;
+    margin-top: 0;
 }
 h2 {
     font-size: 3rem;
