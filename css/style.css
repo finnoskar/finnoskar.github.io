@@ -24,9 +24,16 @@ h1 {
     top: 0;
     z-index: -1;
 }
+#heading {
+    margin-top: 4rem;
+    height: 120vh;
+    width: 100vw;
+    background: linear-gradient(var(--theme-dark), var(--theme-background));
+    z-index: -1;
+}
 #heading h1 {
     position: relative;
-    top: 7rem;
+    top: 4rem;
     margin-left: 15vw;
     padding-top: 0;
     background: linear-gradient(var(--theme-background), var(--theme-accent));
@@ -47,12 +54,6 @@ section {
     border-radius: 30px;
     margin: 3rem 15vw;
     padding: 1rem 3rem;
-}
-#heading {
-    margin: 0;
-    height: 120vh;
-    width: 100vw;
-    background: linear-gradient(var(--theme-dark), var(--theme-background))
 }
 accenttext {
     color: var(--theme-accent);
