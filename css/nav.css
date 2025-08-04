@@ -13,6 +13,7 @@ html {
 nav {
     position: fixed;
     top: 0;
+    min-height: fit-content;
     margin: 0;
     background-color: var(--theme-dark);
     padding: 0.2rem 0;
@@ -29,7 +30,11 @@ nav li {
     float: left;
     margin: 0 2rem;
 }
-nav li + li {
+#central-nav-items {
+    margin-left: 38vw;
+}
+
+nav li + li{
     float: right;
     margin-right: 3rem;
 }
@@ -37,7 +42,8 @@ nav a {
     text-decoration: none;
     color: var(--theme-text-bg);
 }
+
 nav a:hover {
-    text-decoration: underline;
+    text-decoration: underline; 
     text-decoration-thickness: 2px;
 }

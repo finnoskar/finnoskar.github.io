@@ -12,6 +12,7 @@ html {
 }
 body {
     margin: 0;
+    cursor: url("../assets/portfolioImages/floris.png"), auto;
 }
 h1 {
     font-size: 3rem;
@@ -29,18 +30,16 @@ h1 {
     height: 120vh;
     width: 100vw;
     background: linear-gradient(var(--theme-dark), var(--theme-background));
-    z-index: -1;
 }
 #heading h1 {
     position: relative;
-    top: 4rem;
-    margin-left: 15vw;
-    padding-top: 0;
-    background: linear-gradient(var(--theme-background), var(--theme-accent));
+    top: 4vw;
+    margin-left: 18vw;
+    background: linear-gradient(var(--theme-text-bg), var(--theme-accent));
     background-clip: text;
     -webkit-background-clip: text;
+    background-attachment: fixed;
     color: transparent;
-    margin-top: 0;
 }
 h2 {
     font-size: 3rem;
