@@ -12,29 +12,19 @@ html {
 }
 body {
     margin: 0;
-    cursor: url("../assets/portfolioImages/floris.png"), auto;
 }
 h1 {
     font-size: 3rem;
 }
-#dark-fill-in {
-    background-color: var(--theme-dark);
-    height: 4rem;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-}
 #heading {
-    margin-top: 4rem;
-    height: 120vh;
-    width: 100vw;
+    margin: 0;
+    padding: 4rem;
+    padding-left: 18vw;
+    height: 65vh;
+    width: 76vw;
     background: linear-gradient(var(--theme-dark), var(--theme-background));
 }
 #heading h1 {
-    position: relative;
-    top: 4vw;
-    margin-left: 18vw;
     background: linear-gradient(var(--theme-text-bg), var(--theme-accent));
     background-clip: text;
     -webkit-background-clip: text;
@@ -44,16 +34,9 @@ h1 {
 h2 {
     font-size: 3rem;
 }
-iframe {
-    position: fixed;
-    bottom: 0;
-}
 section {
     background-color: var(--theme-text-bg);
     border-radius: 30px;
     margin: 3rem 15vw;
     padding: 1rem 3rem;
-}
-accenttext {
-    color: var(--theme-accent);
 }
