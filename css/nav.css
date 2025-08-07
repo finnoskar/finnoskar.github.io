@@ -11,6 +11,7 @@ html {
     padding: 0;
 }
 nav {
+    font-size: 1.3rem;
     position: sticky;
     top: 1rem;
     margin: 0 30vw;
@@ -27,8 +28,10 @@ nav ul {
     list-style: none;
 }
 nav li {
+    position: relative;
+    top: -0.5em;
     float: left;
-    margin: 0 5vw;
+    margin: 0 3vw;
 }
 nav li + li {
     float: right;
@@ -41,4 +44,8 @@ nav a {
 nav a:hover {
     text-decoration: none;
     color: var(--theme-accent);
+}
+nav img.icon {
+    height: 0.6em;
+    margin-right: 0.5em;
 }
