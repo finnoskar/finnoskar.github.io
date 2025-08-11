@@ -54,6 +54,29 @@ section {
     margin: 3rem 15vw;
     padding: 1rem 3rem;
 }
-accenttext {
+.accenttext {
     color: var(--theme-accent);
+}
+a.landing-link section {
+    height: 80vh;
+    max-height: 80vh;
+    overflow: scroll;
+    padding: 0;
+}
+
+a.landing-link {
+    text-decoration: none;
+    color: var(--theme-text-colour);
+}
+.landing-text {
+    float: left;
+    max-width: 55%;
+    padding: 0.5rem 2rem;
+
+}
+.landing-img {
+    float: right;
+    width: 45%;
+    height: 40rem;
+    background-image: url("../assets/portfolioImages/placeholder.jpg");
 }
