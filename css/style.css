@@ -136,6 +136,8 @@ section.landing-link a {
     width: 100vw;
     background-color: rgba(17, 7, 0, 0.4);
     height: fit-content;
+    background-image: url("../assets/videoMask.png");
+    background-size: auto 100%;
 }
 #video-heading video {
     width: 100%;
