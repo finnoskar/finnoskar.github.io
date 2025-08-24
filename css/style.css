@@ -33,6 +33,12 @@ h1 {
     width: 100vw;
     background: linear-gradient(var(--theme-dark), var(--theme-background));
 }
+#heading img {
+    height: 55vh;
+    position: absolute;
+    top: 28vh;
+    right: 5%;
+}
 #heading h1 {
     position: relative;
     top: 4vw;
@@ -42,6 +48,7 @@ h1 {
     -webkit-background-clip: text;
     background-attachment: fixed;
     color: transparent;
+    z-index: 1;
 }
 h2 {
     font-size: 3rem;
