@@ -134,7 +134,7 @@ section.landing-link a {
 #video-heading {
     margin-top: 4rem;
     width: 100vw;
-    background-color: rgba(17, 7, 0, 0.4);
+    background-color: rgba(17, 7, 0, 0.6);
     height: fit-content;
     background-image: url("../assets/videoMask.png");
     background-size: auto 100%;
