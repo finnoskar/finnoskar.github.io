@@ -33,22 +33,37 @@ h1 {
     width: 100vw;
     background: linear-gradient(var(--theme-dark), var(--theme-background));
 }
-#heading img {
-    height: 55vh;
-    position: absolute;
-    top: 28vh;
-    right: 5%;
-}
 #heading h1 {
     position: relative;
-    top: 4vw;
-    margin-left: 18vw;
-    background: linear-gradient(var(--theme-text-bg), var(--theme-accent));
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-attachment: fixed;
-    color: transparent;
+    top: calc(4vw + (attr(data-header-anim-number em) * 0.3));
+    color: var(--theme-accent);
     z-index: 1;
+}
+#heading h1 a {
+    text-decoration: none;
+}
+@keyframes slide-in-h1 {
+    0% {
+        left: -10em;
+        visibility: hidden;
+        color: var(--theme-text-bg);
+    }
+    40% {
+        color: var(--theme-text-bg);
+    }
+    100% {
+        left: 40vw;
+        visibility: visible;
+        color: var(--theme-accent);
+    }
+}
+
+#heading h1[data-header-anim-number] {
+    visibility: hidden;
+    animation-name: slide-in-h1;
+    animation-duration: calc(2s - (0.4 * attr(data-header-anim-number s)));
+    animation-delay: calc(0.4 * attr(data-header-anim-number s));
+    animation-fill-mode: forwards;
 }
 h2 {
     font-size: 3rem;
