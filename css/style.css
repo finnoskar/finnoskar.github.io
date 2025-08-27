@@ -35,12 +35,42 @@ h1 {
 }
 #heading h1 {
     position: fixed;
-    visibility: visible;
     top: calc(4vh + ((5 * attr(data-header-anim-number vh) - 2vh) * 2.5));
+    left: 40vw;
     color: var(--theme-accent);
     z-index: 1;
 }
+/* needed to hardcode this due to firefox not supporting attr() units */
+#heading h1[data-header-anim-number="1"] {
+    top: 11.5vh;
+}
+#heading h1[data-header-anim-number="2"] {
+    top: 24vh;
+    color: rgb(255, 174, 35) !important;
+}
+#heading h1[data-header-anim-number="3"] {
+    top: 36.5vh;
+}
+#heading h1[data-header-anim-number="4"] {
+    top: 49vh;
+}
+
 @keyframes slide-in-h1 {
+    0% {
+        left: -10em;
+        visibility: hidden;
+        color: var(--theme-text-bg);
+    }
+    40% {
+        color: var(--theme-text-bg);
+    }
+    100% {
+        left: 40vw;
+        visibility: visible;
+        color: var(--theme-accent);
+    }
+}
+@-moz-keyframes slide-in-h1 {
     0% {
         left: -10em;
         visibility: hidden;
@@ -57,6 +87,10 @@ h1 {
 }
 
 #heading h1[data-header-anim-number] {
+    -moz-animation-name: slide-in-h1;
+    -moz-animation-duration: 1s;
+    -moz-animation-fill-mode: backwards;
+
     animation-name: slide-in-h1;
     animation-duration: calc(1s - (0.2 * attr(data-header-anim-number s)));
     animation-delay: calc(0.15 * attr(data-header-anim-number s));
