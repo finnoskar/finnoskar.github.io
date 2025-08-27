@@ -34,13 +34,11 @@ h1 {
     background: linear-gradient(var(--theme-dark), var(--theme-background));
 }
 #heading h1 {
-    position: relative;
-    top: calc(4vw + (attr(data-header-anim-number em) * 0.3));
+    position: fixed;
+    visibility: visible;
+    top: calc(4vh + ((5 * attr(data-header-anim-number vh) - 2vh) * 2.5));
     color: var(--theme-accent);
     z-index: 1;
-}
-#heading h1 a {
-    text-decoration: none;
 }
 @keyframes slide-in-h1 {
     0% {
@@ -59,11 +57,10 @@ h1 {
 }
 
 #heading h1[data-header-anim-number] {
-    visibility: hidden;
     animation-name: slide-in-h1;
-    animation-duration: calc(2s - (0.4 * attr(data-header-anim-number s)));
-    animation-delay: calc(0.4 * attr(data-header-anim-number s));
-    animation-fill-mode: forwards;
+    animation-duration: calc(1s - (0.2 * attr(data-header-anim-number s)));
+    animation-delay: calc(0.15 * attr(data-header-anim-number s));
+    animation-fill-mode: backwards;
 }
 h2 {
     font-size: 3rem;
