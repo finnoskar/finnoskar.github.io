@@ -1,0 +1,20 @@
+html {
+    --theme-background: #F1F4FF;
+    --theme-text-colour: #110700;
+    --theme-accent: #4AC8EB;
+    --theme-dark: black;
+    --theme-subdomain-colour: grey;
+    --theme-text-bg: #FFFAF7;
+    background-color: var(--theme-dark);
+    color: var(--theme-text-bg);
+}
+
+body {
+    background-color: var(--theme-dark);
+    color: var(--theme-text-bg);
+}
+
+section {
+    margin-top: 10rem;
+    color: var(--theme-dark);
+}
