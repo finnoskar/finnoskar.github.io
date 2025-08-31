@@ -36,7 +36,7 @@ h1 {
 #heading h1 {
     position: fixed;
     top: calc(4vh + ((5 * attr(data-header-anim-number vh) - 2vh) * 2.5));
-    left: 40vw;
+    left: 25vw;
     color: var(--theme-accent);
     z-index: 1;
     font-size: 5em;
@@ -66,7 +66,7 @@ h1 {
         color: var(--theme-text-bg);
     }
     100% {
-        left: 40vw;
+        left: 25vw;
         visibility: visible;
         color: var(--theme-accent);
         opacity: 1;
@@ -83,7 +83,7 @@ h1 {
         color: var(--theme-text-bg);
     }
     100% {
-        left: 40vw;
+        left: 25vw;
         visibility: visible;
         color: var(--theme-accent);
         opacity: 1;
@@ -150,8 +150,9 @@ section.landing-link a {
     background-image: url("../assets/portfolioImages/placeholder.jpg");
 }
 .info-banner {
-    font-size: 1.3em;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin: 3rem 0;
     width: 100%;
     height: 20rem;
@@ -161,8 +162,7 @@ section.landing-link a {
     --info-banner-border-width: 10px;
     height: 14rem;
     border-radius: calc(7rem + var(--info-banner-border-width));
-    margin: 3rem 0;
-    margin-left: 25vw;
+    margin: calc(3rem - var(--info-banner-border-width));
     border: var(--info-banner-border-width) solid rgba(0,0,0,0);
     filter: saturate(0);
     transition: border 1s;
@@ -174,16 +174,18 @@ section.landing-link a {
 }
 .info-banner .info-text {
     float: right;
-    margin: 0;
-    margin-bottom: 2.5rem;
-    margin-right: 30vw;
+    height: 14rem;
+    margin: 3rem;
+    font-size: 1rem;
+    max-width: 20rem;
 }
 .info-banner .info-text h4 {
+    margin: 0;
     background-image: linear-gradient(90deg, var(--theme-text-colour), 20%, var(--theme-accent));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 2em;
+    font-size: 2rem;
 }
 #video-heading {
     margin-top: 4rem;
@@ -207,4 +209,11 @@ section.landing-link a {
     -webkit-background-clip: text;
     background-attachment: fixed;
     color: transparent;
+}
+.image-separator {
+    margin: 3rem 0;
+    width: 100%;
+    background-image: url("../assets/portfolioImages/placeholder.jpg");
+    height: 30rem;
+    background-size: cover;
 }
