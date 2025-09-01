@@ -172,6 +172,7 @@ section.landing-link a {
     border-color: var(--theme-accent);
     transition: filter 0.6s, border 0.6s;
 }
+
 .info-banner .info-text {
     float: right;
     height: 14rem;

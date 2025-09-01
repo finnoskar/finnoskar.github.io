@@ -47,3 +47,25 @@ nav a:hover {
     text-decoration: underline; 
     text-decoration-thickness: 2px;
 }
+
+footer {
+    height: 20px;
+    margin: 0; 
+    display: block; 
+    background-color: black; 
+    color: var(--theme-text-bg);
+    padding: 1rem 20vw; 
+    min-height: fit-content; 
+    font-size: 0.9; 
+    position: relative; 
+    bottom: 0; 
+    width: 100%; 
+}
+footer a {
+    text-decoration: none;
+    color: var(--theme-accent);
+}
+footer a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
