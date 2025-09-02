@@ -97,8 +97,8 @@ h1 {
     -moz-animation-timing-function: ease-in-out;
 
     animation-name: slide-in-h1;
-    animation-duration: calc(1.8s - (0.2 * attr(data-header-anim-number s)));
-    animation-delay: calc(0.15 * attr(data-header-anim-number s));
+    animation-duration: calc(1.4s - (0.2 * attr(data-header-anim-number s)));
+    animation-delay: calc(0.2 * attr(data-header-anim-number s));
     animation-fill-mode: backwards;
     animation-timing-function: ease-in-out;
 

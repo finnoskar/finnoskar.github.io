@@ -5,17 +5,30 @@ html {
     --theme-dark: black;
     --theme-subdomain-colour: grey;
     --theme-text-bg: #FFFAF7;
-    background-color: var(--theme-dark);
     color: var(--theme-text-bg);
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: var(--theme-dark);
-    color: var(--theme-text-bg);
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 section {
-    margin-top: 10rem;
-    color: var(--theme-dark);
+    background-color: var(--theme-dark);
+    position: relative;
+    color: var(--theme-text-bg);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+}
+.spacer-div {
+    display: block;
+    height: 6rem;
 }

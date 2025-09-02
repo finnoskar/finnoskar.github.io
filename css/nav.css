@@ -54,12 +54,13 @@ footer {
     display: block; 
     background-color: black; 
     color: var(--theme-text-bg);
-    padding: 1rem 20vw; 
+    padding: 1rem 0; 
     min-height: fit-content; 
     font-size: 0.9; 
     position: relative; 
     bottom: 0; 
     width: 100%; 
+    text-align: center;
 }
 footer a {
     text-decoration: none;
