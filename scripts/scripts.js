@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     linkCursor.style.display = "none";
     linkCursor.style.position = "fixed";
     linkCursor.style.color = "var(--theme-accent)";
-    linkCursor.style.fontWeight = "600";
+    linkCursor.style.fontWeight = "800";
     
     // add the link cursor to the body
     body.appendChild(linkCursor);
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // for every element that uses the link cursor
     for (let linkCursorElement of linkCursorElements) {
         // listen for mouse entering
-        linkCursorElement.addEventListener("mouseenter", (event) => {
+        linkCursorElement.addEventListener("mouseenter", () => {
             // get link cursor element
             let linkCursor = document.getElementById("linkCursor");
             // hide cursor and show link cursor
@@ -39,9 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("mousemove", function(event) {
         // get the link cursor element
         let linkCursor = document.getElementById("linkCursor");
+        // get the mouse location
         let mouseX = event.clientX + 'px';
         let mouseY = event.clientY + 'px';
-        console.log("mouse moved");
+        // set the link curser location
         linkCursor.style.left = mouseX;
         linkCursor.style.top = mouseY;
     })
