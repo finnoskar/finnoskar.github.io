@@ -1,0 +1,40 @@
+body {
+    height: 100vh;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+}
+p#res-too-small-iframe-message {
+    position: fixed;
+    top: 30vh;
+    text-align: center;
+    width: 70%;
+    margin: 2rem 15%;
+    overflow: wrap;
+    display: none;
+}
+iframe {
+    width: 80vw; 
+    margin: calc(15vh - 2rem) 10vw; 
+    height: 65vh; 
+    position: fixed; 
+    top: 2rem;
+}
+iframe + p {
+    position: fixed; 
+    bottom: calc(20px + 2em); 
+    width: 100%;
+    display: block; 
+    text-align: center;
+
+}
+@media only screen and (max-width: 1130px), (max-height: 920px) {
+    iframe {
+        visibility: hidden;
+    }
+    p#res-too-small-iframe-message {
+        display: block;
+    }
+}

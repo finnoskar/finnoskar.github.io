@@ -21,22 +21,31 @@ nav {
     display: inline;
     width: 100vw;
     z-index: 2;
+    font-weight: 500;
 }
 nav ul {
     list-style: none;
 }
 nav li {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     float: left;
     margin: 0 2rem;
 }
-#central-nav-items {
-    margin-left: 38vw;
-}
-
 nav li + li{
     float: right;
     margin-right: 3rem;
+}
+@media only screen and (max-width: 700px) {
+    nav li {
+        font-size: 1rem;
+        margin: 0 0.5em;
+    }
+    nav li + li {
+        margin-right: 1em;
+    }
+    nav .accenttext {
+        display: none;
+    }
 }
 nav a {
     text-decoration: none;
@@ -46,4 +55,27 @@ nav a {
 nav a:hover {
     text-decoration: underline; 
     text-decoration-thickness: 2px;
+}
+
+footer {
+    height: 20px;
+    margin: 0; 
+    display: block; 
+    background-color: black; 
+    color: var(--theme-text-bg);
+    padding: 1rem 0; 
+    min-height: fit-content; 
+    font-size: 0.9; 
+    position: relative; 
+    bottom: 0; 
+    width: 100%; 
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+    color: var(--theme-accent);
+}
+footer a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
 }

@@ -33,22 +33,85 @@ h1 {
     width: 100vw;
     background: linear-gradient(var(--theme-dark), var(--theme-background));
 }
-#heading img {
-    height: 55vh;
-    position: absolute;
-    top: 28vh;
-    right: 5%;
-}
 #heading h1 {
-    position: relative;
-    top: 4vw;
-    margin-left: 18vw;
-    background: linear-gradient(var(--theme-text-bg), var(--theme-accent));
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-attachment: fixed;
-    color: transparent;
+    margin: 0;
+    position: fixed;
+    top: calc(4vh + ((5 * attr(data-header-anim-number vh) - 2vh) * 2.5));
+    left: 15vw;
+    color: var(--theme-accent);
     z-index: 1;
+    font-size: 5em;
+}
+/* needed to hardcode this due to firefox not supporting attr() units */
+#heading h1[data-header-anim-number="1"] {
+    top: calc(4rem + 11.5vh);
+}
+#heading h1[data-header-anim-number="2"] {
+    top: calc(4rem + 24vh);
+}
+#heading h1[data-header-anim-number="3"] {
+    top: calc(4rem + 36.5vh);
+}
+#heading h1[data-header-anim-number="4"] {
+    top: calc(4rem + 49vh);
+}
+
+@keyframes slide-in-h1 {
+    0% {
+        left: 0em;
+        visibility: hidden;
+        color: var(--theme-text-bg);
+        opacity: 0;
+    }
+    40% {
+        color: var(--theme-text-bg);
+    }
+    100% {
+        left: 15vw;
+        visibility: visible;
+        color: var(--theme-accent);
+        opacity: 1;
+    }
+}
+@-moz-keyframes slide-in-h1 {
+    0% {
+        left: -10em;
+        visibility: hidden;
+        color: var(--theme-text-bg);
+        opacity: 0;
+    }
+    40% {
+        color: var(--theme-text-bg);
+    }
+    100% {
+        left: 15vw;
+        visibility: visible;
+        color: var(--theme-accent);
+        opacity: 1;
+    }
+}
+
+#heading h1[data-header-anim-number] {
+    -moz-animation-name: slide-in-h1;
+    -moz-animation-duration: 1s;
+    -moz-animation-fill-mode: backwards;
+    -moz-animation-timing-function: ease-in-out;
+
+    animation-name: slide-in-h1;
+    animation-duration: calc(1.4s - (0.2 * attr(data-header-anim-number s)));
+    animation-delay: calc(0.2 * attr(data-header-anim-number s));
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in-out;
+
+    opacity: 1;
+}
+@media only screen and (max-width: 970px), (max-height: 660px) {
+    #heading h1 {
+        font-size: 2em;
+    }
+    h1, h2, h3, h4 {
+        font-size: 0.7em;
+    }
 }
 h2 {
     font-size: 3rem;
@@ -72,7 +135,9 @@ section.landing-link {
     overflow: hidden;
     border: 15px solid var(--theme-text-bg);
 }
-
+section.landing-link * {
+    cursor: inherit;
+}
 section.landing-link a {
     text-decoration: none;
     color: var(--theme-text-colour);
@@ -94,10 +159,42 @@ section.landing-link a {
     width: 45%;
     height: 45rem;
     background-image: url("../assets/portfolioImages/placeholder.jpg");
+    background-size: 105% auto;
+}
+@media screen and (max-width: 1460px) {
+    section {
+        font-size: 0.8em;
+        min-height: fit-content;
+        min-width: fit-content;
+        width: 80vw;
+        margin: 3rem 10vw;
+        overflow: wrap;
+        text-align: center;
+    }
+    section.landing-link {
+        overflow: wrap;
+        padding: 0;
+    }
+    .landing-text {
+        float: none;
+        max-width: 100%;
+        min-width: fit-content;
+        overflow: wrap;
+        text-align: center;
+    }
+    .landing-img {
+        border-radius: 30px;
+        position: static;
+        float: none;
+        width: 100%;
+        height: 30rem;
+        background-size: 100% auto;
+    }
 }
 .info-banner {
-    font-size: 1.3em;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin: 3rem 0;
     width: 100%;
     height: 20rem;
@@ -107,8 +204,7 @@ section.landing-link a {
     --info-banner-border-width: 10px;
     height: 14rem;
     border-radius: calc(7rem + var(--info-banner-border-width));
-    margin: 3rem 0;
-    margin-left: 25vw;
+    margin: calc(3rem - var(--info-banner-border-width));
     border: var(--info-banner-border-width) solid rgba(0,0,0,0);
     filter: saturate(0);
     transition: border 1s;
@@ -120,16 +216,18 @@ section.landing-link a {
 }
 .info-banner .info-text {
     float: right;
-    margin: 0;
-    margin-bottom: 2.5rem;
-    margin-right: 30vw;
+    height: 14rem;
+    margin: 3rem;
+    font-size: 1rem;
+    max-width: 20rem;
 }
 .info-banner .info-text h4 {
+    margin: 0;
     background-image: linear-gradient(90deg, var(--theme-text-colour), 20%, var(--theme-accent));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 2em;
+    font-size: 2rem;
 }
 #video-heading {
     margin-top: 4rem;
@@ -153,4 +251,11 @@ section.landing-link a {
     -webkit-background-clip: text;
     background-attachment: fixed;
     color: transparent;
+}
+.image-separator {
+    margin: 3rem 0;
+    width: 100%;
+    background-image: url("../assets/portfolioImages/placeholder.jpg");
+    height: 30rem;
+    background-size: cover;
 }
