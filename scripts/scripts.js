@@ -1,10 +1,46 @@
-let linkCursorElements = document.querySelectorAll("section.landing-link a, .info-banner img#info-image");
-let body = document.getElementsByTagName("body")[0];
-let linkCursorElement = document.createElement("div");
-linkCursorElement.textContent = "follow this link";
+document.addEventListener("DOMContentLoaded", () => {
+    // define the linkCursorElements (elements that need the thing activate), body element, and the link Cursor div (the thing that moves)
+    var linkCursorElements = document.querySelectorAll("section.landing-link a, .info-banner img#info-image");
+    var body = document.getElementsByTagName("body")[0];
+    var linkCursor = document.createElement("div");
 
-for (let linkCursorElement of linkCursorElements) {
-    linkCursorElement.addEventListener("mouseover" () => {
-        console.log("finish this");
+    // set attributes of the cursor for the lonks
+    linkCursor.textContent = "follow this link";
+    linkCursor.id = "linkCursor";
+    linkCursor.style.display = "none";
+    linkCursor.style.position = "fixed";
+    linkCursor.style.color = "var(--theme-accent)";
+    linkCursor.style.fontWeight = "600";
+    
+    // add the link cursor to the body
+    body.appendChild(linkCursor);
+
+    // for every element that uses the link cursor
+    for (let linkCursorElement of linkCursorElements) {
+        // listen for mouse entering
+        linkCursorElement.addEventListener("mouseenter", (event) => {
+            // get link cursor element
+            let linkCursor = document.getElementById("linkCursor");
+            // hide cursor and show link cursor
+            linkCursorElement.style.cursor = "none";
+            linkCursor.style.display = "inline-block";
+    
+        })
+        // listen to mouse leaving
+        linkCursorElement.addEventListener("mouseleave", () => {
+            // get link cursor element
+            let linkCursor = document.getElementById("linkCursor");
+            // make cursor visible and hide the link cursor
+            linkCursorElement.style.cursor = "auto";
+            linkCursor.style.display = "none";
+        })
+    }
+    document.addEventListener("mousemove", function(event) {
+        let linkCursor = document.getElementById("linkCursor");
+        let mouseX = event.clientX + 'px';
+        let mouseY = event.clientY + 'px';
+        console.log("mouse moved");
+        linkCursor.style.left = mouseX;
+        linkCursor.style.top = mouseY;
     })
-}
+})
