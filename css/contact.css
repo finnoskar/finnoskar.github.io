@@ -21,6 +21,9 @@ section {
     background-color: var(--theme-dark);
     position: relative;
     color: var(--theme-text-bg);
+    margin: 3rem 30vw;
+    width: 40vw;
+    overflow: wrap;
 }
 
 footer {
