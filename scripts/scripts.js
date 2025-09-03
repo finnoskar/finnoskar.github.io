@@ -35,7 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
             linkCursor.style.display = "none";
         })
     }
+    // listen for mouse movement
     document.addEventListener("mousemove", function(event) {
+        // get the link cursor element
         let linkCursor = document.getElementById("linkCursor");
         let mouseX = event.clientX + 'px';
         let mouseY = event.clientY + 'px';
