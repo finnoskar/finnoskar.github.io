@@ -40,10 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
         // get the link cursor element
         let linkCursor = document.getElementById("linkCursor");
         // get the mouse location
-        let mouseX = event.clientX + 'px';
-        let mouseY = event.clientY + 'px';
+        let mouseX = event.clientX;
+        let mouseY = event.clientY;
         // set the link curser location
-        linkCursor.style.left = mouseX;
-        linkCursor.style.top = mouseY;
+        linkCursor.style.left = mouseX + 'px';
+        linkCursor.style.top = mouseY + 'px';''
     })
 })
