@@ -32,6 +32,7 @@ h1 {
     height: 120vh;
     width: 100vw;
     background: linear-gradient(var(--theme-dark), var(--theme-background));
+    font-size: 5em;
 }
 #heading h1 {
     margin: 0;
@@ -40,7 +41,6 @@ h1 {
     left: 15vw;
     color: var(--theme-accent);
     z-index: 1;
-    font-size: 5em;
 }
 /* needed to hardcode this due to firefox not supporting attr() units */
 #heading h1[data-header-anim-number="1"] {
@@ -107,15 +107,22 @@ h1 {
 }
 @media only screen and (max-width: 970px), (max-height: 660px) {
     #heading h1 {
-        font-size: 2em;
+        font-size: 0.5em;
     }
-    h1, h2, h3, h4 {
-        font-size: 0.7em;
+    h1 {
+        font-size: 0.7rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    h3 {
+        font-size: 0.9rem;
+    }
+    h4 {
+        font-size: 1rem;
     }
 }
-h2 {
-    font-size: 3rem;
-}
+
 iframe {
     position: fixed;
     bottom: 0;
@@ -163,39 +170,7 @@ section.landing-link a {
     width: 45%;
     height: 45rem;
     background-image: url("../assets/portfolioImages/placeholder.jpg");
-    background-size: 105% auto;
-}
-@media screen and (max-width: 1460px) {
-    section {
-        font-size: 0.8em;
-        min-height: fit-content;
-        min-width: fit-content;
-        max-width: 80vw;
-        margin: 3rem 10vw;
-        margin-left: 10vw;
-        margin-right: 10vw;
-        overflow: wrap;
-        text-align: center;
-    }
-    section.landing-link {
-        overflow: wrap;
-        padding: 0;
-    }
-    .landing-text {
-        float: none;
-        max-width: 100%;
-        min-width: fit-content;
-        overflow: wrap;
-        text-align: center;
-    }
-    .landing-img {
-        border-radius: 30px;
-        position: static;
-        float: none;
-        width: 100%;
-        height: 30rem;
-        background-size: 100% auto;
-    }
+    background-size: cover auto;
 }
 .info-banner {
     display: flex;
@@ -235,6 +210,56 @@ section.landing-link a {
     color: transparent;
     font-size: 2rem;
 }
+@media screen and (max-width: 1460px) {
+    section {
+        font-size: 0.8rem;
+        min-height: fit-content;
+        min-width: fit-content;
+        max-width: 80vw;
+        margin: 3rem 10vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        overflow: wrap;
+        text-align: center;
+    }
+    section.landing-link {
+        overflow: wrap;
+        padding: 0;
+    }
+    .landing-text {
+        float: none;
+        max-width: 100%;
+        min-width: fit-content;
+        overflow: wrap;
+        text-align: center;
+    }
+    .landing-img {
+        border-radius: 30px;
+        position: static;
+        float: none;
+        width: 100%;
+        height: 30rem;
+        background-size: 100% auto;
+    }
+    .info-banner {
+        flex-direction: column;
+        height: fit-content;
+        justify-content: start;
+    }
+    .info-banner img#info-img {
+        margin: 0;
+        padding: 0;
+        height: 7rem;
+        border-radius: 3.5rem;
+        border: none;
+    }
+    .info-banner img#info-img:hover {
+        border: none;
+    }
+    .info-banner .info-text {
+        font-size: 0.8rem;
+    }
+}
 #video-heading {
     margin-top: 4rem;
     width: 100vw;
@@ -264,4 +289,5 @@ section.landing-link a {
     background-image: url("../assets/portfolioImages/placeholder.jpg");
     height: 30rem;
     background-size: cover;
+    background-attachment: fixed;
 }
