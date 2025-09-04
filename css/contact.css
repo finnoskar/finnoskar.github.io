@@ -5,7 +5,6 @@ html {
     --theme-dark: black;
     --theme-subdomain-colour: grey;
     --theme-text-bg: #FFFAF7;
-    color: var(--theme-text-bg);
     margin: 0;
     padding: 0;
 }
@@ -17,13 +16,26 @@ body {
     padding: 0;
 }
 
-section {
-    background-color: var(--theme-dark);
+section#contact-section {
+    background-color: transparent;
     position: relative;
     color: var(--theme-text-bg);
-    margin: 3rem 30vw;
-    width: 40vw;
     overflow: wrap;
+}
+section#contact-section h2 {
+    font-size: 2rem;
+}
+@media only screen and (max-width: 500px) {
+    section#contact-section {
+        font-size: 0.8rem;
+        min-height: fit-content;
+        min-width: fit-content;
+        max-width: 90vw;
+        margin: 3rem 5vw;
+        padding: 0;
+        overflow: wrap;
+        text-align: center;
+    }
 }
 
 footer {
@@ -33,5 +45,5 @@ footer {
 }
 .spacer-div {
     display: block;
-    height: 6rem;
+    height: 1rem;
 }

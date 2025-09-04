@@ -41,6 +41,8 @@ h1 {
     left: 15vw;
     color: var(--theme-accent);
     z-index: 1;
+    font-size: 1em;
+    white-space: nowrap;
 }
 /* needed to hardcode this due to firefox not supporting attr() units */
 #heading h1[data-header-anim-number="1"] {
@@ -142,10 +144,10 @@ section.landing-link {
     overflow: hidden;
     border: 15px solid var(--theme-text-bg);
 }
-section.landing-link:has(> a:hover) {
+/* section.landing-link:has(> a:hover) {
     border-color: var(--theme-accent);
     background-color: var(--theme-accent);
-}
+} */
 section.landing-link * {
     cursor: inherit;
 }
@@ -176,6 +178,7 @@ section.landing-link a {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: fit-content;
     margin: 3rem 0;
     width: 100%;
     height: 20rem;
@@ -211,7 +214,7 @@ section.landing-link a {
     font-size: 2rem;
 }
 @media screen and (max-width: 1460px) {
-    section {
+    section:not(#contact-section) {
         font-size: 0.8rem;
         min-height: fit-content;
         min-width: fit-content;
@@ -259,6 +262,7 @@ section.landing-link a {
         border: none;
     }
     .info-banner .info-text {
+        height: fit-content;
         font-size: 0.8rem;
         margin-top: 1rem;
     }
