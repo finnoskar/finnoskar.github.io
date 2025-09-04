@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     linkCursor.style.display = "none";
     linkCursor.style.position = "fixed";
     linkCursor.style.color = "var(--theme-accent)";
+    linkCursor.style.pointerEvents = "none";
     linkCursor.style.fontWeight = "800";
     
     // add the link cursor to the body

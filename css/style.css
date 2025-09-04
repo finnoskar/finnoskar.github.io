@@ -135,6 +135,10 @@ section.landing-link {
     overflow: hidden;
     border: 15px solid var(--theme-text-bg);
 }
+section.landing-link:has(> a:hover) {
+    border-color: var(--theme-accent);
+    background-color: var(--theme-accent);
+}
 section.landing-link * {
     cursor: inherit;
 }
@@ -166,8 +170,10 @@ section.landing-link a {
         font-size: 0.8em;
         min-height: fit-content;
         min-width: fit-content;
-        width: 80vw;
+        max-width: 80vw;
         margin: 3rem 10vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
         overflow: wrap;
         text-align: center;
     }
