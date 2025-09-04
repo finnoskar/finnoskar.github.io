@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // define the linkCursorElements (elements that need the thing activate), body element, and the link Cursor div (the thing that moves)
-    var linkCursorElements = document.querySelectorAll("section.landing-link a, .info-banner img#info-image");
+    var linkCursorElements = document.querySelectorAll("section.landing-link a, .info-banner a:has(img#info-image)");
     var body = document.getElementsByTagName("body")[0];
     var linkCursor = document.createElement("div");
 
@@ -22,6 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
         linkCursorElement.addEventListener("mouseenter", () => {
             // get link cursor element
             let linkCursor = document.getElementById("linkCursor");
+            let targetHref = linkCursorElement.href;
+            targetHref = targetHref.split('/');
+            let targetLocalHref = targetHref.at(-1); // m u s i c . h t m l
+            linkCursor.textContent = "follow link to " + targetLocalHref.slice(0, targetLocalHref.length - 5);
             // hide cursor and show link cursor
             linkCursorElement.style.cursor = "none";
             linkCursor.style.display = "inline-block";

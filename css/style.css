@@ -245,19 +245,22 @@ section.landing-link a {
         flex-direction: column;
         height: fit-content;
         justify-content: start;
+        align-items: center;
     }
-    .info-banner img#info-img {
+    .info-banner img#info-image {
         margin: 0;
+        margin-top: 1rem;
         padding: 0;
-        height: 7rem;
-        border-radius: 3.5rem;
+        height: 10rem;
+        border-radius: 5rem;
         border: none;
     }
-    .info-banner img#info-img:hover {
+    .info-banner img#info-image:hover {
         border: none;
     }
     .info-banner .info-text {
         font-size: 0.8rem;
+        margin-top: 1rem;
     }
 }
 #video-heading {
