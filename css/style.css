@@ -171,7 +171,7 @@ section.landing-link a {
     float: right;
     width: 45%;
     height: 45rem;
-    background-image: url("../assets/portfolioImages/placeholder.jpg");
+    background-image: url("../assets/images/placeholder.jpg");
     background-size: cover auto;
 }
 .info-banner {
@@ -272,7 +272,7 @@ section.landing-link a {
     width: 100vw;
     background-color: rgba(17, 7, 0, 0.6);
     height: fit-content;
-    background-image: url("../assets/videoMask.png");
+    background-image: url("../assets/videos/videoMask.png");
     background-size: auto 100%;
 }
 #video-heading video {
@@ -293,8 +293,11 @@ section.landing-link a {
 .image-separator {
     margin: 3rem 0;
     width: 100%;
-    background-image: url("../assets/portfolioImages/placeholder.jpg");
+    background-image: url("../assets/images/placeholder.jpg");
     height: 30rem;
     background-size: cover;
     background-attachment: fixed;
+}
+.image-separator#first-image {
+    background-image: url("../assets/images/parsley.jpg");
 }

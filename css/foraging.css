@@ -30,7 +30,7 @@ iframe + p {
     text-align: center;
 
 }
-@media only screen and (max-width: 1130px), (max-height: 920px) {
+@media only screen and (max-width: 1000px), (max-height: 800px) {
     iframe {
         visibility: hidden;
     }
