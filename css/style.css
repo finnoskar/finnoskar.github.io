@@ -152,6 +152,7 @@ section.landing-link * {
     cursor: inherit;
 }
 section.landing-link a {
+    display: block;
     text-decoration: none;
     color: var(--theme-text-colour);
     height: 100%;
