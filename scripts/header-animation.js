@@ -7,7 +7,7 @@ document.addEventListener("scroll", () => {
     const NATURAL_LEFT = 15; // Natural left value of the headers, in vw;
 
     for (let headingText of animatedHeaderTexts) {
-        let scrolledRatio = window.scrollY / (0.5 * HEADING_HEIGHT);
+        let scrolledRatio = window.scrollY / (0.35 * HEADING_HEIGHT);
         if (["1", "3"].includes(headingText.getAttribute("data-header-anim-number"))) {
             let changeInLeft = -1.5 * scrolledRatio * NATURAL_LEFT;
             var newLeftPos = NATURAL_LEFT + changeInLeft;

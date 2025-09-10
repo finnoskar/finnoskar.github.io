@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var linkCursor = document.createElement("div");
 
     // set attributes of the cursor for the lonks
-    linkCursor.textContent = "follow this link";
+    linkCursor.textContent = "click to follow this link";
     linkCursor.id = "linkCursor";
     linkCursor.style.display = "none";
     linkCursor.style.position = "fixed";
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let targetHref = linkCursorElement.href;
             targetHref = targetHref.split('/');
             let targetLocalHref = targetHref.at(-1); // m u s i c . h t m l
-            linkCursor.textContent = "follow link to " + targetLocalHref.slice(0, targetLocalHref.length - 5);
+            linkCursor.textContent = "click to follow link to " + targetLocalHref.slice(0, targetLocalHref.length - 5);
             // hide cursor and show link cursor
             linkCursorElement.style.cursor = "none";
             linkCursor.style.display = "inline-block";
