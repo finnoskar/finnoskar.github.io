@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
     // listen for mouse movement
-    document.addEventListener("mousemove", function(event) {
+    document.addEventListener("mousemove", (event) => {
         // get the link cursor element
         let linkCursor = document.getElementById("linkCursor");
         // get the mouse location

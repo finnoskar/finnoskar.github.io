@@ -57,6 +57,11 @@ h1 {
 #heading h1[data-header-anim-number="4"] {
     top: calc(4rem + 49vh);
 }
+#heading h1[data-header-anim-number="4"]::after {
+    content: "*slogan courtesy of ChatGPT - WIP";
+    font-size: 0.15em;
+    vertical-align: super;
+}
 
 @keyframes slide-in-h1 {
     0% {
@@ -109,7 +114,7 @@ h1 {
 }
 @media only screen and (max-width: 970px), (max-height: 660px) {
     #heading h1 {
-        font-size: 0.45em;
+        font-size: 0.35em;
     }
     h1 {
         font-size: 0.7rem;
