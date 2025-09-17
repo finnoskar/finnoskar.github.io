@@ -113,7 +113,7 @@ h1 {
     opacity: 1;
 }
 @media only screen and (max-width: 970px), (max-height: 660px) {
-    #heading h1 {
+    #heading h1, #video-heading h1 {
         font-size: 0.35em;
     }
     h1 {
@@ -298,13 +298,22 @@ section.landing-link a {
 }
 #video-heading h1 {
     position: absolute;
-    top: 10vw;
-    margin-left: 18vw;
-    background: linear-gradient(var(--theme-text-bg), var(--theme-accent));
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-attachment: fixed;
-    color: transparent;
+    top: 10vh;
+    margin-left: 15vw;
+    font-size: 3.5rem;
+    color: var(--theme-accent);
+}
+#video-heading .attribution-link {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--theme-text-bg);
+    position: absolute;
+    left: 1rem;
+    bottom: -12%;
+}
+#video-heading .attribution-link:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--theme-accent);
 }
 .image-separator {
     margin: 3rem 0;
