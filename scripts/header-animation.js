@@ -5,7 +5,6 @@ document.addEventListener("scroll", () => {
     const HEADING_HEIGHT = heading.offsetHeight + 300;
     const DOCUMENT_WIDTH = 100; // in vw
     const NATURAL_LEFT = 15; // Natural left value of the headers, in vw;
-
     for (let headingText of animatedHeaderTexts) {
         let scrolledRatio = window.scrollY / (0.35 * HEADING_HEIGHT);
         if (["1", "3"].includes(headingText.getAttribute("data-header-anim-number"))) {
@@ -18,6 +17,7 @@ document.addEventListener("scroll", () => {
         }
         headingText.style.left = newLeftPos + "vw";
     }
+        
 })
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
