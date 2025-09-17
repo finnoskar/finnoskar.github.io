@@ -16,13 +16,6 @@ body {
     font-family: "Nata Sans", sans-serif;
     margin: 0;
 }
-a:not(section.landing-link a), a:not(nav a) {
-    color: inherit;
-    text-decoration: underline;
-}
-a:not(section.landing-link a):hover, a:not(nav a):hover {
-    text-decoration-color: var(--theme-accent);
-}
 h1 {
     font-size: 3rem;
 }
@@ -307,7 +300,7 @@ section.landing-link a {
     position: absolute;
     top: 10vh;
     margin-left: 15vw;
-    font-size: 5rem;
+    font-size: 3.5rem;
     color: var(--theme-accent);
 }
 #video-heading .attribution-link {
