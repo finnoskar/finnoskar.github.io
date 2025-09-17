@@ -36,6 +36,21 @@ h1 {
 }
 #heading h1 {
     margin: 0;
+    position: sticky;
+    top: 20vh;
+    margin-left: 15vw;
+    color: var(--theme-accent);
+    font-size: 1em;
+}
+#anim-heading {
+    margin-top: 4rem;
+    height: 120vh;
+    width: 100vw;
+    background: linear-gradient(var(--theme-dark), var(--theme-background));
+    font-size: 5em;
+}
+#anim-heading h1 {
+    margin: 0;
     position: fixed;
     top: calc(4vh + ((5 * attr(data-header-anim-number vh) - 2vh) * 2.5));
     left: 15vw;
@@ -45,19 +60,19 @@ h1 {
     white-space: nowrap;
 }
 /* needed to hardcode this due to firefox not supporting attr() units */
-#heading h1[data-header-anim-number="1"] {
+#anim-heading h1[data-header-anim-number="1"] {
     top: calc(4rem + 11.5vh);
 }
-#heading h1[data-header-anim-number="2"] {
+#anim-heading h1[data-header-anim-number="2"] {
     top: calc(4rem + 24vh);
 }
-#heading h1[data-header-anim-number="3"] {
+#anim-heading h1[data-header-anim-number="3"] {
     top: calc(4rem + 36.5vh);
 }
-#heading h1[data-header-anim-number="4"] {
+#anim-heading h1[data-header-anim-number="4"] {
     top: calc(4rem + 49vh);
 }
-#heading h1[data-header-anim-number="4"]::after {
+#anim-heading h1[data-header-anim-number="4"]::after {
     content: "*slogan courtesy of ChatGPT - WIP";
     font-size: 0.15em;
     vertical-align: super;
@@ -98,7 +113,7 @@ h1 {
     }
 }
 
-#heading h1[data-header-anim-number] {
+#anim-heading h1[data-header-anim-number] {
     -moz-animation-name: slide-in-h1;
     -moz-animation-duration: 1s;
     -moz-animation-fill-mode: backwards;
@@ -113,7 +128,7 @@ h1 {
     opacity: 1;
 }
 @media only screen and (max-width: 970px), (max-height: 660px) {
-    #heading h1, #video-heading h1 {
+    #anim-heading h1, #video-heading h1, #heading h1 {
         font-size: 0.35em;
     }
     h1 {
@@ -128,14 +143,9 @@ h1 {
     h4 {
         font-size: 1rem;
     }
-    #heading h1[data-header-anim-number="4"]::after {
+    #anim-heading h1[data-header-anim-number="4"]::after {
         content: "";
     }
-}
-
-iframe {
-    position: fixed;
-    bottom: 0;
 }
 section {
     background-color: var(--theme-text-bg);
@@ -152,10 +162,6 @@ section.landing-link {
     overflow: hidden;
     border: 15px solid var(--theme-text-bg);
 }
-/* section.landing-link:has(> a:hover) {
-    border-color: var(--theme-accent);
-    background-color: var(--theme-accent);
-} */
 section.landing-link * {
     cursor: inherit;
 }
@@ -215,11 +221,11 @@ section.landing-link a {
     transition: filter 0.6s, border 0.6s;
 }
 .info-banner .info-text {
-    float: right;
-    height: 14rem;
-    margin: 3rem;
+    height: fit-content;
+    margin: 0;
     font-size: 1rem;
     max-width: 20rem;
+    align-self: center;;
 }
 .info-banner .info-text h4 {
     margin: 0;

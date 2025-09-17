@@ -1,7 +1,7 @@
 document.addEventListener("scroll", () => {
     // Find elements and define constants
-    let heading = document.getElementById("heading");
-    let animatedHeaderTexts = document.querySelectorAll("#heading h1");
+    let heading = document.getElementById("anim-heading");
+    let animatedHeaderTexts = document.querySelectorAll("#anim-heading h1");
     const HEADING_HEIGHT = heading.offsetHeight + 300;
     const DOCUMENT_WIDTH = 100; // in vw
     const NATURAL_LEFT = 15; // Natural left value of the headers, in vw;
