@@ -1,5 +1,5 @@
 
-html {
+:root {
     font-size: 150%;
     --theme-background: #F1F4FF;
     --theme-text-colour: #110700;
@@ -129,7 +129,7 @@ h1 {
 }
 @media only screen and (max-width: 970px), (max-height: 660px) {
     #anim-heading h1, #video-heading h1, #heading h1 {
-        font-size: 0.35em;
+        font-size: 0.5em;
     }
     h1 {
         font-size: 0.7rem;
@@ -145,6 +145,14 @@ h1 {
     }
     #anim-heading h1[data-header-anim-number="4"]::after {
         content: "";
+    }
+}
+@media only screen and (max-width: 430px), (max-height: 450px) {
+    #anim-heading h1, #video-heading h1, #heading h1 {
+        font-size: 0.35em;
+    }
+    h1 {
+        font-size: 0.7rem;
     }
 }
 section {
@@ -209,6 +217,8 @@ section.landing-link a {
 .info-banner img#info-image {
     --info-banner-border-width: 10px;
     height: 14rem;
+    max-width: 85vw;
+    aspect-ratio: initial;
     border-radius: calc(7rem + var(--info-banner-border-width));
     margin: calc(3rem - var(--info-banner-border-width));
     border: var(--info-banner-border-width) solid rgba(0,0,0,0);
@@ -285,12 +295,14 @@ section.landing-link a {
     }
     .info-banner .info-text {
         height: fit-content;
+        text-align: center;
         font-size: 0.8rem;
         margin-top: 1rem;
     }
 }
 #video-heading {
     margin-top: 4rem;
+    font-size: 5rem;
     width: 100vw;
     background-color: rgba(17, 7, 0, 0.6);
     height: fit-content;
