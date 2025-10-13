@@ -198,7 +198,7 @@ section.landing-link a {
     background-position-x: center !important;
 }
 .landing-img#digitech-landing-img {
-    background-image: url("../assets/images/digitech-landing-link-image.png");
+    background-image: url("../assets/images/digitech_landing_link_image.png");
     height: 30rem;
 }
 .landing-img#music-landing-img {
@@ -276,6 +276,8 @@ section.landing-link a {
         height: 30rem;
         background-size: 100% auto;
     }
+}
+@media screen and (max-width: 1200px) {
     .info-banner {
         flex-direction: column;
         height: fit-content;
@@ -306,7 +308,7 @@ section.landing-link a {
     width: 100vw;
     background-color: rgba(17, 7, 0, 0.6);
     height: fit-content;
-    background-image: url("../assets/videos/videoMask.png");
+    background-image: url("../assets/videos/video_mask.png");
     background-size: auto 100%;
 }
 #video-heading video {
