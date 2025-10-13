@@ -13,6 +13,11 @@ if (window.matchMedia("(hover: hover)").matches) {
         linkCursor.style.color = "var(--theme-accent)";
         linkCursor.style.pointerEvents = "none";
         linkCursor.style.fontWeight = "800";
+        linkCursor.style.padding = "0.3em 0.3em 0.5em 0.3em";
+        linkCursor.style.borderRadius = "1.5em";
+        linkCursor.style.backgroundColor = "var(--theme-text-bg)"
+
+
         
         // add the link cursor to the body
         body.appendChild(linkCursor);
@@ -20,7 +25,7 @@ if (window.matchMedia("(hover: hover)").matches) {
         // for every element that uses the link cursor
         for (let linkCursorElement of linkCursorElements) {
             // listen for mouse entering
-            linkCursorElement.addEventListener("mouseenter", () => {
+            linkCursorElement.addEventListener("mouseover", () => {
                 // get link cursor element
                 let linkCursor = document.getElementById("linkCursor");
                 let targetHref = linkCursorElement.href;
@@ -52,5 +57,23 @@ if (window.matchMedia("(hover: hover)").matches) {
             linkCursor.style.left = mouseX + 'px';
             linkCursor.style.top = mouseY + 'px';''
         })
+
+        document.addEventListener("mousemove", (event, linkCursorElements) => {
+            // get the link cursor
+            let linkCursor = document.getElementById("linkCursor");
+            // get the mouse location
+            let mouseX = event.clientX;
+            let mouseY = event.clientY;
+            // iterate through link cursor elements to find if the cursor is over one
+            for (let linkCursorElement of linkCursorElements) {
+                let area = linkCursorElement.getBoundingClientRect();
+                let areaX = area["x"];
+                let arexY = area["y"];
+                let areaBottom = area["bottom"];
+                let areaRight = area["right"];
+                    
+            }
+
+    })
     })
 }

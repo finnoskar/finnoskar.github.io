@@ -320,8 +320,13 @@ section.landing-link a {
     position: absolute;
     top: 10vh;
     margin-left: 15vw;
-    font-size: 3.5rem;
+    font-size: 6rem;
     color: var(--theme-accent);
+}
+@media screen and (max-width: 1050px) {
+    #video-heading h1 {
+        font-size: 3.5rem;
+    }
 }
 #video-heading .attribution-link {
     font-size: 0.8rem;
@@ -345,4 +350,8 @@ section.landing-link a {
 }
 .image-separator#first-image {
     background-image: url("../assets/images/parsley.jpg");
+}
+.image-separator#music {
+    background-image: url("../assets/images/wheelbarrow.jpg");
+    background-position: center;
 }
