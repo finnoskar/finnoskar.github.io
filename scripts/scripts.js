@@ -1,9 +1,11 @@
 if (window.matchMedia("(hover: hover)").matches) {
     document.addEventListener("DOMContentLoaded", () => {
         // define the linkCursorElements (elements that need the thing activate), body element, and the link Cursor div (the thing that moves)
-        var linkCursorElements = document.querySelectorAll("section.landing-link a, .info-banner a:has(img#info-image)");
+        var linkCursorElements = Array.from(document.querySelectorAll("section.landing-link a, .info-banner a:has(img#info-image)"));
         var body = document.getElementsByTagName("body")[0];
         var linkCursor = document.createElement("div");
+        var mouseX = 0;
+        var mouseY = 0;
 
         // set attributes of the cursor for the lonks
         linkCursor.textContent = "click to follow this link";
@@ -51,29 +53,56 @@ if (window.matchMedia("(hover: hover)").matches) {
             // get the link cursor element
             let linkCursor = document.getElementById("linkCursor");
             // get the mouse location
-            let mouseX = event.clientX;
-            let mouseY = event.clientY;
+            mouseX = event.clientX;
+            mouseY = event.clientY;
+            console.log(mouseX);
+            console.log(mouseY);
             // set the link curser location
             linkCursor.style.left = mouseX + 'px';
             linkCursor.style.top = mouseY + 'px';''
         })
 
-        document.addEventListener("mousemove", (event, linkCursorElements) => {
-            // get the link cursor
-            let linkCursor = document.getElementById("linkCursor");
-            // get the mouse location
-            let mouseX = event.clientX;
-            let mouseY = event.clientY;
+        document.addEventListener("scroll", () => {
             // iterate through link cursor elements to find if the cursor is over one
             for (let linkCursorElement of linkCursorElements) {
                 let area = linkCursorElement.getBoundingClientRect();
                 let areaX = area["x"];
-                let arexY = area["y"];
+                let areaY = area["y"];
                 let areaBottom = area["bottom"];
-                let areaRight = area["right"];
-                    
+                let areaRight = area["right"];   
+                var mouseXBounded = (mouseX >= areaX) && (mouseX <= areaRight);  
+                var mouseYBounded = (mouseY >= areaY) && (mouseY <= areaBottom);  
+                let isBounded =  mouseXBounded && mouseYBounded;
+                var linkCursorElementNow = linkCursorElement;
+                console.log("x: " + areaX);
+                console.log("y: " + areaY);
+                console.log("r: " + areaRight);
+                console.log("b: " + areaBottom);
+                console.log("mx: " + mouseX);
+                console.log("my: " + mouseY);
+                console.log(mouseXBounded);
+                console.log(mouseYBounded);
+                if (isBounded) {console.log('was bounded'); break}
             }
-
+            console.log("xBounded: " + mouseXBounded);
+            console.log("yBounded: " + mouseYBounded);
+            if (mouseXBounded && mouseYBounded) {
+                let linkCursor = document.getElementById("linkCursor");
+                let targetHref = linkCursorElementNow.href;
+                targetHref = targetHref.split('/');
+                let targetLocalHref = targetHref.at(-1); // m u s i c . h t m l
+                linkCursor.textContent = "click to follow link to " + targetLocalHref.slice(0, targetLocalHref.length - 5);
+                // hide cursor and show link cursor
+                linkCursorElementNow.style.cursor = "none";
+                linkCursor.style.display = "inline-block";
+            }
+            else {
+                // get link cursor element
+                let linkCursor = document.getElementById("linkCursor");
+                // make cursor visible and hide the link cursor
+                linkCursorElementNow.style.cursor = "auto";
+                linkCursor.style.display = "none";
+            }
     })
     })
 }
