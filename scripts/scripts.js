@@ -13,6 +13,9 @@ if (window.matchMedia("(hover: hover)").matches) {
         linkCursor.style.color = "var(--theme-accent)";
         linkCursor.style.pointerEvents = "none";
         linkCursor.style.fontWeight = "800";
+        linkCursor.style.padding = "0.3em 0.3em 0.5em";
+        linkCursor.style.borderRadius = "1.5em";
+        linkCursor.style.backgroundColor = "var(--theme-text-bg)";
         
         // add the link cursor to the body
         body.appendChild(linkCursor);
