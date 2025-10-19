@@ -179,9 +179,6 @@ section.landing-link a {
     color: var(--theme-text-colour);
     height: 100%;
     width: 100%;
-    border: red;
-    border-width: 10px;
-    border-style: solid;
 }
 .landing-text {
     background-color: inherit;
@@ -227,7 +224,6 @@ section.landing-link a {
     border: var(--info-banner-border-width) solid rgba(0,0,0,0);
     filter: saturate(0);
     transition: border 1s;
-    border-color: red;
 }
 .info-banner img#info-image:hover {
     filter: saturate(1);
