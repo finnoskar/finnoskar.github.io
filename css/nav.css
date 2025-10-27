@@ -1,3 +1,4 @@
+/* base variable and style definition */
 html {
     --theme-background: #F1F4FF;
     --theme-text-colour: #110700;
@@ -5,11 +6,13 @@ html {
     --theme-dark: black;
     --theme-subdomain-colour: grey;
     --theme-text-bg: #FFFAF7;
+
     background-color: var(--theme-background);
     color: var(--theme-text-colour);
     margin: 0;
     padding: 0;
 }
+/* the top nav bar */
 nav {
     position: fixed;
     top: 0;
@@ -35,6 +38,7 @@ nav li + li{
     float: right;
     margin-right: 3rem;
 }
+/* media breakpoint for shrinkage of the navbar */
 @media only screen and (max-width: 800px) {
     nav li {
         font-size: 1rem;
@@ -56,7 +60,7 @@ nav a:hover {
     text-decoration: underline; 
     text-decoration-thickness: 2px;
 }
-
+/* the footer */
 footer {
     height: 20px;
     margin: 0; 
