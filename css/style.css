@@ -1,12 +1,14 @@
-
+/* basic variable definitions */
 :root {
     font-size: 150%;
+
     --theme-background: #F1F4FF;
     --theme-text-colour: #110700;
     --theme-accent: #4AC8EB;
     --theme-dark: black;
     --theme-subdomain-colour: grey;
     --theme-text-bg: #FFFAF7;
+
     background-color: var(--theme-background);
     color: var(--theme-text-colour);
     z-index: 0;
@@ -19,6 +21,7 @@ body {
 h1 {
     font-size: 3rem;
 }
+/* the div to stop scrolling up past nav bar */
 #dark-fill-in {
     background-color: var(--theme-dark);
     height: 4rem;
@@ -27,6 +30,7 @@ h1 {
     top: 0;
     z-index: -1;
 }
+/* my default heading style, like on digitech */
 #heading {
     margin-top: 4rem;
     height: 120vh;
@@ -42,6 +46,7 @@ h1 {
     color: var(--theme-accent);
     font-size: 1em;
 }
+/* the animated heading style like on landing page */
 #anim-heading {
     margin-top: 4rem;
     height: 120vh;
@@ -77,7 +82,7 @@ h1 {
     font-size: 0.15em;
     vertical-align: super;
 }
-
+/* animation for the anim-heading */
 @keyframes slide-in-h1 {
     0% {
         left: 0em;
@@ -95,6 +100,7 @@ h1 {
         opacity: 1;
     }
 }
+/* so it works on firefox */
 @-moz-keyframes slide-in-h1 {
     0% {
         left: -10em;
@@ -112,7 +118,7 @@ h1 {
         opacity: 1;
     }
 }
-
+/* the specifics of the slide-in animation for each header text */
 #anim-heading h1[data-header-anim-number] {
     -moz-animation-name: slide-in-h1;
     -moz-animation-duration: 1s;
@@ -127,6 +133,7 @@ h1 {
 
     opacity: 1;
 }
+/* media breakpoint for heading text size */
 @media only screen and (max-width: 970px), (max-height: 660px) {
     #anim-heading h1, #video-heading h1, #heading h1 {
         font-size: 0.5em;
@@ -147,6 +154,7 @@ h1 {
         content: "";
     }
 }
+/* media breakpoint to make it even smaller at a smaller breakpoint */
 @media only screen and (max-width: 430px), (max-height: 450px) {
     #anim-heading h1, #video-heading h1, #heading h1 {
         font-size: 0.35em;
@@ -155,21 +163,25 @@ h1 {
         font-size: 0.7rem;
     }
 }
+/* the main section used for text */
 section {
     background-color: var(--theme-text-bg);
     border-radius: 30px;
     margin: 3rem 15vw;
     padding: 1rem 3rem;
 }
+/* the coloured text used for accents */
 .accenttext {
     color: var(--theme-accent);
 }
+/* the landing page linked sections */
 section.landing-link {
     padding: 0;
     background-color: var(--theme-text-bg);
     overflow: hidden;
     border: 15px solid var(--theme-text-bg);
 }
+/* support for linked cursor for the children */
 section.landing-link * {
     cursor: inherit;
 }
@@ -197,13 +209,16 @@ section.landing-link a {
     background-size: 100% auto;
     background-position-x: center !important;
 }
+/* specific image for the digitech secgtion */
 .landing-img#digitech-landing-img {
     background-image: url("../assets/images/digitech_landing_link_image.png");
     height: 35em;
 }
+/* the image for music landing section */
 .landing-img#music-landing-img {
     height: 30em;
 }
+/* the info banner used on the landing page and the digitech page */
 .info-banner {
     display: flex;
     flex-direction: row;
@@ -235,13 +250,14 @@ section.landing-link a {
     margin: 0;
     font-size: 1rem;
     max-width: 20rem;
-    align-self: center;;
+    align-self: center;
 }
 .info-banner .info-text h4 {
     margin: 0;
     color: var(--theme-text-colour);
     font-size: 2rem;
 }
+/* media breakpoints for sections and info banners*/
 @media screen and (max-width: 1460px) {
     section:not(#contact-section) {
         font-size: 0.8rem;
@@ -296,6 +312,7 @@ section.landing-link a {
         margin-top: 1rem;
     }
 }
+/* the heading used on the music page */
 #video-heading {
     margin-top: 4rem;
     font-size: 5rem;
@@ -322,6 +339,7 @@ section.landing-link a {
         font-size: 3.5rem;
     }
 }
+/*  the attribution to freepik for the licensed video */
 #video-heading .attribution-link {
     font-size: 0.8rem;
     text-decoration: none;
@@ -334,6 +352,7 @@ section.landing-link a {
     text-decoration: underline;
     text-decoration-color: var(--theme-accent);
 }
+/* the full-width image content separator */
 .image-separator {
     margin: 3rem 0;
     width: 100%;
