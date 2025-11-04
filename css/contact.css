@@ -91,3 +91,9 @@ footer {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+@media screen and (max-width: 1000px) {
+    .animated-ball {
+        animation: none;
+        display: none;
+    }
+}
